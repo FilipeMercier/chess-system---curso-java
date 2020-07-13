@@ -42,7 +42,7 @@ public class Board {
 		}
 		
 		pieces[position.getRow()][position.getColumn()] = piece;
-		piece.positon = position;
+		piece.position = position;
 	}
 	public Piece removePiece(Position position) {
 		if (!positionExists(position)) {
@@ -52,7 +52,7 @@ public class Board {
 			return null;
 		}
 		Piece aux = piece(position);
-		aux.positon = null;
+		aux.position = null;
 		pieces[position.getRow()][position.getColumn()] = null;
 		return aux;
 	}
